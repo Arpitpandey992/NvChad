@@ -50,5 +50,7 @@ vim.api.nvim_set_keymap('v', '<S-M-k>', ':lua duplicate_lines_up()<CR>', { norem
 vim.api.nvim_set_keymap('n', '<S-M-j>', ':lua duplicate_line_down()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<S-M-j>', ':lua duplicate_lines_down()<CR>', { noremap = true, silent = true })
 
+vim.cmd("hi Normal ctermbg=none guibg=none")
+
 require "plugins"
 
