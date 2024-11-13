@@ -53,19 +53,5 @@ vim.api.nvim_set_keymap('v', '<S-M-j>', ':lua duplicate_lines_down()<CR>', { nor
 -- make background of neovim transparent
 vim.cmd("hi Normal ctermbg=none guibg=none")
 
--- fix clipboard when using inside WSL
-vim.g.clipboard = {
-    name = "win32yank-wsl",
-    copy = {
-        ["+"] = "win32yank.exe -i --crlf",
-        ["*"] = "win32yank.exe -i --crlf",
-    },
-    paste = {
-        ["+"] = "win32yank.exe -o --lf",
-        ["*"] = "win32yank.exe -o --lf",
-    },
-    cache_enabled = true,
-}
-
 require "plugins"
 
