@@ -3,7 +3,6 @@ local null_ls = require('null-ls')
 
 local opts = {
   sources = {
-<<<<<<< Updated upstream
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy.with({
       extra_args = function()
@@ -11,11 +10,6 @@ local opts = {
       return { "--python-executable", virtual .. "/bin/python3" }
       end,
     }),
-=======
-    null_ls.builtins.formatting.autopep8,
-    null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.ruff,
->>>>>>> Stashed changes
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
